@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Check, Palette, Code, TrendingUp, Camera, Search, Megaphone } from "lucide-react"
+import Image from "next/image"
 
 export default function ServicesPage() {
   const t = useTranslations()
@@ -14,6 +15,7 @@ export default function ServicesPage() {
       title: "Web Design & Development",
       description:
         "UX/UI design, Webflow or WordPress development, responsive design, SEO-optimized websites that convert visitors into customers.",
+      image: "/web-design.jpg", // Replace with your actual image path
       features: [
         "Custom UX/UI Design",
         "Webflow Development",
@@ -30,6 +32,7 @@ export default function ServicesPage() {
       title: "Branding & Visual Identity",
       description:
         "Logo design, visual identity, brand strategy, and comprehensive brand guidelines that make you unforgettable.",
+      image: "/branding.jpg", // Replace with your actual image path
       features: [
         "Logo Design",
         "Visual Identity System",
@@ -46,6 +49,7 @@ export default function ServicesPage() {
       title: "Digital Strategy",
       description:
         "Digital strategy, user research, conversion optimization, and data-driven insights to grow your business.",
+      image: "/digital-strategy.jpg", // Replace with your actual image path
       features: [
         "Digital Strategy Planning",
         "User Research & Testing",
@@ -97,18 +101,33 @@ export default function ServicesPage() {
       {/* Main Services */}
       <section className="section-padding relative bg-black ">
         <div
-      className="absolute inset-0 z-0"
-      style={{
-        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000",
-      }}
-    />
+          className="absolute inset-0 z-0"
+          style={{
+            background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000",
+          }}
+        />
   
         <div className="container-custom z-10 relative">
           <div className="grid lg:grid-cols-1 gap-16">
             {services.map((service, index) => (
-              <Card key={index} className="border-0 shadow-lg hover-lift">
+              <Card key={index} className="border-0 shadow-lg hover-lift overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    {/* Image Section */}
+                    <div>
+                    <div className="relative h-32 lg:h-auto lg:min-h-[200px] rounded-xl px-6 ">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        
+                        className="object-cover rounded-xl"
+                        width={400}
+                        height={400}
+                      />
+                     
+                    </div>
+                    
+                    {/* Content Section */}
                     <div className="p-8 lg:p-12">
                       <div className="flex items-center mb-6">
                         <div className="w-16 h-16 bg-[var(--lime-green)] rounded-lg flex items-center justify-center mr-4">
@@ -119,6 +138,9 @@ export default function ServicesPage() {
                       <CardDescription className="text-large mb-8">{service.description}</CardDescription>
                       <Button className="btn-primary">Let's Build Your {service.title.split(" ")[0]}</Button>
                     </div>
+                    </div>
+                    
+                    {/* Features Section */}
                     <div className="p-8 lg:p-12 bg-[var(--light-gray)]">
                       <h4 className="text-xl font-semibold mb-6">What's Included:</h4>
                       <ul className="space-y-3">
