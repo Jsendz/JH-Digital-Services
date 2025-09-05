@@ -26,7 +26,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider>
           <Navigation />
-          <main className="min-h-screen">
+          <main className="min-h-screen overflow-x-hidden">
           {children}
         </main>
           <Footer />

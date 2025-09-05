@@ -50,6 +50,9 @@
 
  
 }
+html, body {
+  overflow-x: hidden;
+}
 
 :root {
   --radius: 0.625rem;

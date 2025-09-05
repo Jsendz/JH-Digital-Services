@@ -4,7 +4,7 @@ import { ArrowRight, Play } from 'lucide-react'
 
 export default function HeroSection() {
   return (
-   <div className="min-h-screen w-full relative ">
+   <div className="min-h-screen w-full relative overflow-x-hidden">
     {/* Emerald Depths Background with Top Glow */}
     <div
       className="absolute inset-0 z-0"

@@ -41,7 +41,8 @@ export default function ServicePreview() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-items-center mx-auto max-w-5xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-items-center mx-auto max-w-5xl w-full px-4">
+
           <Link href="/services" className="block h-full">
             <ServiceCard
               icon={<Code size={40} />}
