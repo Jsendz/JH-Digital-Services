@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "insights": "Insights",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact"
+  }
+}
