@@ -43,7 +43,7 @@ export default function ServicePreview() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-items-center mx-auto max-w-5xl w-full px-4">
 
-          <Link href="/services" className="block h-full">
+          <Link href="/contact" className="block h-full">
             <ServiceCard
               icon={<Code size={40} />}
               title="Web-Design"
@@ -51,7 +51,7 @@ export default function ServicePreview() {
             />
           </Link>
           
-          <Link href="/services" className="block h-full">
+          <Link href="/contact" className="block h-full">
             <ServiceCard
               icon={<Briefcase size={40} />}
               title="Branding"
@@ -59,7 +59,7 @@ export default function ServicePreview() {
             />
           </Link>
           
-          <Link href="/services" className="block h-full">
+          <Link href="/contact" className="block h-full">
             <ServiceCard
               icon={<Camera size={40} />}
               title="Strategy"

@@ -60,10 +60,11 @@ export default function Navigation() {
 
         {/* Desktop Language Switcher & CTA */}
         <div className="hidden lg:flex items-center space-x-4">
-          
+          <Link href="/contacto">
           <Button className="bg-lime-500 text-black hover:bg-lime-600">
             Book a Call
           </Button>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -91,29 +92,11 @@ export default function Navigation() {
             
             {/* Mobile Language Switcher & CTA */}
             <div className="flex flex-col items-center space-y-3 pt-3 border-t border-gray-300/30">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="text-sm">
-                    <Globe className="w-4 h-4 mr-2" />
-                    EN
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem>
-                    <Link href="/" locale="en">
-                      English
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Link href="/" locale="es">
-                      Español
-                    </Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+             <Link href="/contact">
               <Button className="bg-lime-500 text-black hover:bg-lime-600 w-full max-w-[200px] text-sm">
                 Book a Call
               </Button>
+              </Link>
             </div>
           </div>
         </div>
